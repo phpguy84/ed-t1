@@ -1,0 +1,6 @@
+- hosts: docker_hosts
+  tasks:
+  - include_role:
+      name: crivetimihai.docker
+  - include_role:
+      name: mariadb-docker

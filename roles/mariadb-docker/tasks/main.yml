@@ -1,0 +1,26 @@
+- name: include vars
+  include_vars:
+    dir: "vars"
+
+- name: install python3 and pip
+  package:
+    name:
+      - python-pip
+      - python3
+    state: present
+
+- name: install python docker lib
+  pip:
+    name: docker
+
+- name: install MariaDB
+  docker_container:
+    name: "{{ mariadb_container_name }}"
+    image: "{{ mariadb_image }}"
+    state: started
+    restart: yes
+    env:
+        MYSQL_USER: "{{ mysql_user }}"
+        MYSQL_PASSWORD: "{{ mysql_password }}"
+        MYSQL_ROOT_PASSWORD: "{{ mysql_root_password }}"
+  become: true

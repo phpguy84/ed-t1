@@ -1,0 +1,13 @@
+---
+# Configuration templates to copy
+_docker_templates_copy:
+  all:
+    - src: config.toml.j2
+      dest: /etc/containerd/config.toml
+  CentOS_7: []
+  RedHat_7: []
+  CentOS_8: []
+  RedHat_8: []
+  Fedora_31: []
+  Debian_10: []
+  Ubuntu_18: []

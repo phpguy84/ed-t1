@@ -1,0 +1,9 @@
+---
+# defaults file for docker
+
+docker_remove_packages: true
+docker_enable_service: true
+docker_copy_templates: true
+docker_users:
+  - user: devops
+    group: docker
