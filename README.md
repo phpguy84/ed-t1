@@ -12,4 +12,6 @@ Testing the setup:
 2. `docker exec -it mariadb-instance bash`
 3. `mysql -u zamro -p` (provide the password from the test task description)
 
-All the credentials are in the Ansible vault file. They are encrypted. For the sake of this current assesment I put the vault password along with the repo (you can find it in the vault.txt). In real systems this is done differently of course.
+Some points to mention:
+- All the credentials are in the Ansible vault file. They are encrypted. For the sake of this current assesment I put the vault password along with the repo (you can find it in the vault.txt).
+- Real setup configuration of Ansible control host makes it easier to configure such parameters that I defined in `envvars` file. In real configuration they are usually configured in `/etc/ansible/ansible.cfg`
