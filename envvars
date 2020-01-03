@@ -1,2 +1,1 @@
-export ANSIBLE_ROLES_PATH=~/my-projects/eriks-digital/ed-t1/roles
 export ANSIBLE_VAULT_PASSWORD_FILE=~/my-projects/eriks-digital/ed-t1/vault.txt
